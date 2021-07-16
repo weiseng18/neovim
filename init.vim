@@ -1,3 +1,14 @@
+" plugins
+call plug#begin('~/.config/nvim/plugged')
+
+Plug 'tomasiser/vim-code-dark'  " color scheme
+Plug 'preservim/nerdtree'       " sidebar directory
+Plug 'neovim/nvim-lspconfig'    " LSP
+Plug 'nvim-lua/completion-nvim' " Auto complete
+Plug 'ctrlpvim/ctrlp.vim'       " fuzzy search
+
+call plug#end()
+
 " set
 set tabstop=2           " # of spaces a <Tab> counts for
 set softtabstop=2       " # of spaces a <Tab> is when editing
@@ -26,8 +37,27 @@ set completeopt=menuone,noinsert,noselect
 set undodir=~/.config/nvim/undodir
 set spellfile=~/.config/nvim/spell/en.utf-8.add
 
+colorscheme codedark
+
+lua require("maki")
+
+" nerd-tree
+let g:NERDTreeWinSize    = 25
+let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeMinimalUI  = 1
+let g:NERDTreeShowHidden = 1
+
+function! CurrentDirTree()
+  execute "NERDTreeToggle ".expand('%:p:h')
+endfunction
+
 " bindings
 nnoremap <Space> <Nop>
 let mapleader = " "
 
 nnoremap <leader>rw :source $MYVIMRC<CR>
+nnoremap <leader>t :call CurrentDirTree()<CR>
+nnoremap <leader>gd :lua vim.lsp.buf.definition()<CR>
+
+" abbreviations
+cnoreabbrev pi PlugInstall
