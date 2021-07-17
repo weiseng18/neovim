@@ -53,6 +53,12 @@ function! CurrentDirTree()
   execute "NERDTreeToggle ".expand('%:p:h')
 endfunction
 
+" ultisnips
+let g:UltiSnipsExpandTrigger       = '<Tab>'
+let g:UltiSnipsJumpForwardTrigger  = ';'
+let g:UltiSnipsJumpBackwardTrigger = ':'
+let g:UltiSnipsEditSplit           = 'vertical'
+
 " bindings
 nnoremap <Space> <Nop>
 let mapleader = " "
