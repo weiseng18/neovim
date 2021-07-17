@@ -6,6 +6,7 @@ Plug 'preservim/nerdtree'       " sidebar directory
 Plug 'neovim/nvim-lspconfig'    " LSP
 Plug 'nvim-lua/completion-nvim' " Auto complete
 Plug 'ctrlpvim/ctrlp.vim'       " fuzzy search
+Plug 'sheerun/vim-polyglot'     " languages support
 
 call plug#end()
 
