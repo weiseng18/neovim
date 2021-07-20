@@ -53,10 +53,13 @@ function! CurrentDirTree()
   execute "NERDTreeToggle ".expand('%:p:h')
 endfunction
 
+" to allow ultisnips triggers to function properly
+map! <C-h> <Nop>
+
 " ultisnips
 let g:UltiSnipsExpandTrigger       = '<Tab>'
-let g:UltiSnipsJumpForwardTrigger  = ';'
-let g:UltiSnipsJumpBackwardTrigger = ':'
+let g:UltiSnipsJumpForwardTrigger  = '<C-l>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-h>'
 let g:UltiSnipsEditSplit           = 'vertical'
 
 " bindings
