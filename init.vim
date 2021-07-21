@@ -5,9 +5,12 @@ Plug 'tomasiser/vim-code-dark'  " color scheme
 Plug 'preservim/nerdtree'       " sidebar directory
 Plug 'neovim/nvim-lspconfig'    " LSP
 Plug 'hrsh7th/nvim-compe'       " Auto complete
-Plug 'ctrlpvim/ctrlp.vim'       " fuzzy search
 Plug 'sheerun/vim-polyglot'     " languages support
 Plug 'SirVer/ultisnips'         " snippets
+
+Plug 'nvim-lua/popup.nvim'      " telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 
@@ -34,7 +37,7 @@ set nobackup            " disables backup
 set autochdir           " keep pwd the same as current buffer
 set termguicolors       " enable 24-bit colors
 set colorcolumn=80      " color up the 80th column
-set completeopt=menuone,noinsert,noselect
+set completeopt=menuone,noselect
 
 set undodir=~/.config/nvim/undodir
 set spellfile=~/.config/nvim/spell/en.utf-8.add
@@ -69,6 +72,9 @@ let mapleader = " "
 nnoremap <leader>r :source $MYVIMRC<CR>
 nnoremap <leader>t :call CurrentDirTree()<CR>
 nnoremap <leader>gd :lua vim.lsp.buf.definition()<CR>
+" telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 
 " abbreviations
 cnoreabbrev pi PlugInstall
