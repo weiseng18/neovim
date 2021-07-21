@@ -4,7 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'tomasiser/vim-code-dark'  " color scheme
 Plug 'preservim/nerdtree'       " sidebar directory
 Plug 'neovim/nvim-lspconfig'    " LSP
-Plug 'nvim-lua/completion-nvim' " Auto complete
+Plug 'hrsh7th/nvim-compe'       " Auto complete
 Plug 'ctrlpvim/ctrlp.vim'       " fuzzy search
 Plug 'sheerun/vim-polyglot'     " languages support
 Plug 'SirVer/ultisnips'         " snippets
