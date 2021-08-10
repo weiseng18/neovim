@@ -1,4 +1,11 @@
-" plugins
+" ------------------------------------------------------------ contents
+" vim_sets
+" vim_colors
+" vim_nerdtree
+" vim_ultisnips
+" vim_remaps
+" vim_abbrevs
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tomasiser/vim-code-dark'  " color scheme
@@ -14,7 +21,8 @@ Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 
-" set
+" ------------------------------------------------------------ vim_sets
+
 set tabstop=2           " # of spaces a <Tab> counts for
 set softtabstop=2       " # of spaces a <Tab> is when editing
 set expandtab           " space instead tab when pressing <Tab>
@@ -42,7 +50,11 @@ set completeopt=menuone,noselect
 set undodir=~/.config/nvim/undodir
 set spellfile=~/.config/nvim/spell/en.utf-8.add
 
+" ---------------------------------------------------------- vim_colors
+
 colorscheme codedark
+
+" -------------------------------------------------------- vim_nerdtree
 
 lua require("maki")
 
@@ -56,6 +68,8 @@ function! CurrentDirTree()
   execute "NERDTreeToggle ".expand('%:p:h')
 endfunction
 
+" ------------------------------------------------------- vim_ultisnips
+
 " to allow ultisnips triggers to function properly
 map! <C-h> <Nop>
 
@@ -65,7 +79,8 @@ let g:UltiSnipsJumpForwardTrigger  = '<C-l>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-h>'
 let g:UltiSnipsEditSplit           = 'vertical'
 
-" bindings
+" ---------------------------------------------------------- vim_remaps
+
 nnoremap <Space> <Nop>
 let mapleader = " "
 
@@ -76,5 +91,5 @@ nnoremap <leader>gd :lua vim.lsp.buf.definition()<CR>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 
-" abbreviations
+" --------------------------------------------------------- vim_abbrevs
 cnoreabbrev pi PlugInstall
