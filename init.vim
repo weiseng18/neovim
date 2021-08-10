@@ -2,6 +2,7 @@
 " vim_sets
 " vim_colors
 " vim_nerdtree
+" vim_lsc
 " vim_ultisnips
 " vim_remaps
 " vim_abbrevs
@@ -14,6 +15,8 @@ Plug 'neovim/nvim-lspconfig'    " LSP
 Plug 'hrsh7th/nvim-compe'       " Auto complete
 Plug 'sheerun/vim-polyglot'     " languages support
 Plug 'SirVer/ultisnips'         " snippets
+
+Plug 'natebosch/vim-lsc'        " vim-lsc, required for LSP Java
 
 Plug 'nvim-lua/popup.nvim'      " telescope
 Plug 'nvim-lua/plenary.nvim'
@@ -78,6 +81,10 @@ let g:UltiSnipsExpandTrigger       = '<Tab>'
 let g:UltiSnipsJumpForwardTrigger  = '<C-l>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-h>'
 let g:UltiSnipsEditSplit           = 'vertical'
+
+" ------------------------------------------------------------- vim_lsc
+
+let g:lsc_server_commands = {'java': '~/Downloads/vim-java/java-language-server/dist/lang_server_linux.sh'}
 
 " ---------------------------------------------------------- vim_remaps
 
