@@ -18,6 +18,8 @@ Plug 'SirVer/ultisnips'         " snippets
 
 Plug 'natebosch/vim-lsc'        " vim-lsc, required for LSP Java
 
+Plug 'lervag/vimtex'            " Latex
+
 Plug 'nvim-lua/popup.nvim'      " telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
