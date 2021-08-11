@@ -6,11 +6,17 @@ $1
 \end{document}
 endsnippet
 
+# sections/environments
+
 snippet ss "section star" i
 \section*{$1}$0
 endsnippet
 
+snippet ssq "section star question" i
+\section*{Question $1}$0
+endsnippet
 snippet beqs "begin equation star" i
+
 \begin{equation*}
 $1
 \end{equation*}$0
@@ -18,5 +24,16 @@ endsnippet
 
 snippet bfl "begin flush left" i
 \begin{flalign*}
-	$1&&
-\end{flalign*}$0
+	$1 &= $2 & \\\\$0
+\end{flalign*}
+endsnippet
+
+snippet nl "new line" i
+$1 &= $2 & \\\\$0
+endsnippet
+
+# math
+
+snippet prz "positive real and zero" i
+x \in \mathbb{R}^+ \cup \\{0\\}
+endsnippet
