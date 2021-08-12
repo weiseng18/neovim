@@ -11,6 +11,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tomasiser/vim-code-dark'  " color scheme
 Plug 'flazz/vim-colorschemes'
+
 Plug 'preservim/nerdtree'       " sidebar directory
 Plug 'neovim/nvim-lspconfig'    " LSP
 Plug 'hrsh7th/nvim-compe'       " Auto complete
@@ -33,6 +34,10 @@ set tabstop=2           " # of spaces a <Tab> counts for
 set softtabstop=2       " # of spaces a <Tab> is when editing
 set expandtab           " space instead tab when pressing <Tab>
 set shiftwidth=2        " # of spaces to use for each >> and <<
+
+" for cs2030s
+autocmd Filetype java setlocal tabstop=4 softtabstop=4 shiftwidth=4
+
 set wrap linebreak      " line wrap, without breaking words
 set breakindent         " indented wraps
 set relativenumber      " line numbers relative to cursor line
