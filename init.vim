@@ -10,6 +10,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tomasiser/vim-code-dark'  " color scheme
+Plug 'flazz/vim-colorschemes'
 Plug 'preservim/nerdtree'       " sidebar directory
 Plug 'neovim/nvim-lspconfig'    " LSP
 Plug 'hrsh7th/nvim-compe'       " Auto complete
@@ -96,9 +97,15 @@ let mapleader = " "
 nnoremap <leader>r :source $MYVIMRC<CR>
 nnoremap <leader>t :call CurrentDirTree()<CR>
 nnoremap <leader>gd :lua vim.lsp.buf.definition()<CR>
+
+" tabs
+nnoremap <A-h> :tabprevious<CR>
+nnoremap <A-l> :tabnext<CR>
+
 " telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 
 " --------------------------------------------------------- vim_abbrevs
 cnoreabbrev pi PlugInstall
+cnoreabbrev te tabedit
