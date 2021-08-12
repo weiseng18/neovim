@@ -63,7 +63,8 @@ set spellfile=~/.config/nvim/spell/en.utf-8.add
 
 " ---------------------------------------------------------- vim_colors
 
-colorscheme codedark
+colorscheme PaperColor
+set background=light
 
 " -------------------------------------------------------- vim_nerdtree
 
