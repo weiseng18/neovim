@@ -7,6 +7,9 @@ snippet init "init" i
 \newcommand{\inv}{^{-1}}
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 
+\newcommand{\ol}[1]{\begin{enumerate}#1\end{enumerate}}
+\newcommand{\ul}[1]{\begin{itemize}#1\end{itemize}}
+
 \begin{document}
 $1
 \end{document}
@@ -38,8 +41,18 @@ snippet nl "new line" i
 $1 &= $2 & \\\\$0
 endsnippet
 
+snippet bals "begin align star" i
+\begin{align*}
+	$1
+\end{align*}$0
+endsnippet
+
 # math
 
 snippet prz "positive real and zero" i
 x \in \mathbb{R}^+ \cup \\{0\\}
+endsnippet
+
+snippet df "dfrac" i
+\dfrac{$1}{$2}$0
 endsnippet
