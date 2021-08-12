@@ -10,6 +10,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tomasiser/vim-code-dark'  " color scheme
+Plug 'flazz/vim-colorschemes'
 Plug 'preservim/nerdtree'       " sidebar directory
 Plug 'neovim/nvim-lspconfig'    " LSP
 Plug 'hrsh7th/nvim-compe'       " Auto complete
