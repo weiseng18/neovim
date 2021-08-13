@@ -118,6 +118,8 @@ nnoremap <leader>m ciw$$<esc>P
 
 " --------------------------------------------------------- vim_abbrevs
 
+cnoreabbrev pc PlugClean
 cnoreabbrev pi PlugInstall
+cnoreabbrev pu PlugUpdate
 cnoreabbrev te tabedit
 cnoreabbrev ue UltiSnipsEditSplit
