@@ -48,7 +48,7 @@ set incsearch           " search as you type
 set nohlsearch          " unhighlight matches after searching
 set scrolloff=10        " scrolls before cursor reaches edge
 set laststatus=2        " statusline always on
-set foldmethod=marker   " enables folding
+set foldmethod=indent   " enables folding
 set spelllang=en_us     " enables spell check
 set noerrorbells        " disables terminal sounds
 set noswapfile          " disables swap file
