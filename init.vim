@@ -117,5 +117,7 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>m ciw$$<esc>P
 
 " --------------------------------------------------------- vim_abbrevs
+
 cnoreabbrev pi PlugInstall
 cnoreabbrev te tabedit
+cnoreabbrev ue UltiSnipsEditSplit
