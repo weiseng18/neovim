@@ -100,9 +100,10 @@ let g:lsc_server_commands = {'java': '~/Downloads/vim-java/java-language-server/
 nnoremap <Space> <Nop>
 let mapleader = " "
 
+nnoremap <leader>ev :tabedit $MYVIMRC<CR>
+nnoremap <leader>gd :lua vim.lsp.buf.definition()<CR>
 nnoremap <leader>r :source $MYVIMRC<CR>
 nnoremap <leader>t :call CurrentDirTree()<CR>
-nnoremap <leader>gd :lua vim.lsp.buf.definition()<CR>
 
 " tabs
 nnoremap <A-h> :tabprevious<CR>
