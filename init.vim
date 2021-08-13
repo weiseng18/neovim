@@ -122,4 +122,4 @@ cnoreabbrev pc PlugClean
 cnoreabbrev pi PlugInstall
 cnoreabbrev pu PlugUpdate
 cnoreabbrev te tabedit
-cnoreabbrev ue UltiSnipsEditSplit
+cnoreabbrev ue UltiSnipsEdit
