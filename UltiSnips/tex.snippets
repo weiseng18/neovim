@@ -8,15 +8,35 @@ endsnippet
 
 # sections/environments
 
-snippet ss "section star" i
-\section*{$1}$0
+snippet s "section" i
+\section{$1}$0
+endsnippet
+
+snippet s2 "subsection" i
+\subsection{$1}$0
+endsnippet
+
+snippet s3 "subsubsection" i
+\subsubsection{$1}$0
 endsnippet
 
 snippet ssq "section star question" i
 \section*{Question $1}$0
 endsnippet
-snippet beqs "begin equation star" i
 
+snippet ss "section star" i
+\section*{$1}$0
+endsnippet
+
+snippet s2s "subsection star" i
+\subsection*{$1}$0
+endsnippet
+
+snippet s3s "subsubsection star" i
+\subsubsection*{$1}$0
+endsnippet
+
+snippet beqs "begin equation star" i
 \begin{equation*}
 $1
 \end{equation*}$0
@@ -36,6 +56,16 @@ snippet bals "begin align star" i
 \begin{align*}
 	$1
 \end{align*}$0
+endsnippet
+
+snippet tb "table" i
+\begin{center}
+	\begin{tabular}{ |c|c|c| }
+		\hline
+		$1
+		\hline
+	\end{tabular}
+\end{center}
 endsnippet
 
 # math
