@@ -2,27 +2,30 @@
 " vim_sets
 " vim_colors
 " vim_nerdtree
-" vim_lsc
 " vim_ultisnips
+" vim_lsc
+" vim_markdown_preview
 " vim_remaps
 " vim_abbrevs
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'tomasiser/vim-code-dark'  " color scheme
+Plug 'tomasiser/vim-code-dark'        " color scheme
 Plug 'flazz/vim-colorschemes'
 
-Plug 'preservim/nerdtree'       " sidebar directory
-Plug 'neovim/nvim-lspconfig'    " LSP
-Plug 'hrsh7th/nvim-compe'       " Auto complete
-Plug 'sheerun/vim-polyglot'     " languages support
-Plug 'SirVer/ultisnips'         " snippets
+Plug 'preservim/nerdtree'             " sidebar directory
+Plug 'neovim/nvim-lspconfig'          " LSP
+Plug 'hrsh7th/nvim-compe'             " Auto complete
+Plug 'sheerun/vim-polyglot'           " languages support
+Plug 'SirVer/ultisnips'               " snippets
 
-Plug 'natebosch/vim-lsc'        " vim-lsc, required for LSP Java
+Plug 'natebosch/vim-lsc'              " vim-lsc, required for LSP Java
 
-Plug 'lervag/vimtex'            " Latex
+Plug 'iamcco/markdown-preview.nvim'   " markdown previewer
 
-Plug 'nvim-lua/popup.nvim'      " telescope
+Plug 'lervag/vimtex'                  " Latex
+
+Plug 'nvim-lua/popup.nvim'            " telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
@@ -94,6 +97,42 @@ let g:UltiSnipsEditSplit           = 'vertical'
 " ------------------------------------------------------------- vim_lsc
 
 let g:lsc_server_commands = {'java': '~/Downloads/vim-java/java-language-server/dist/lang_server_linux.sh'}
+
+" ------------------------------------------------ vim_markdown_preview
+
+let g:mkdp_auto_start = 0
+let g:mkdp_auto_close = 1
+let g:mkdp_refresh_slow = 0
+let g:mkdp_command_for_global = 0
+let g:mkdp_browserfunc = ''
+let g:mkdp_filetypes = ['markdown']
+
+" expose preview to network
+let g:mkdp_open_to_the_world = 0
+let g:mkdp_open_ip = ''
+let g:mkdp_browser = ''
+let g:mkdp_echo_preview_url = 0
+let g:mkdp_port = ''
+let g:mkdp_page_title = '「${name}」'
+
+" rendering/preview
+let g:mkdp_preview_options = {
+    \ 'mkit': {},
+    \ 'katex': {},
+    \ 'uml': {},
+    \ 'maid': {},
+    \ 'disable_sync_scroll': 0,
+    \ 'sync_scroll_type': 'middle',
+    \ 'hide_yaml_meta': 1,
+    \ 'sequence_diagrams': {},
+    \ 'flowchart_diagrams': {},
+    \ 'content_editable': v:false,
+    \ 'disable_filename': 0
+    \ }
+let g:mkdp_markdown_css = ''
+let g:mkdp_highlight_css = ''
+
+nmap <C-p> <Plug>MarkdownPreviewToggle
 
 " ---------------------------------------------------------- vim_remaps
 
