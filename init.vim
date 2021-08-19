@@ -41,6 +41,9 @@ set shiftwidth=2        " # of spaces to use for each >> and <<
 " for cs2030s
 autocmd Filetype java setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
+" for latex
+autocmd BufNewFile,BufRead *.tex :autocmd TextChanged,TextChangedI <buffer> silent write
+
 set wrap linebreak      " line wrap, without breaking words
 set breakindent         " indented wraps
 set relativenumber      " line numbers relative to cursor line
