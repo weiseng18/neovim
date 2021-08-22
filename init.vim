@@ -144,6 +144,7 @@ let mapleader = " "
 
 nnoremap <leader>ev :tabedit $MYVIMRC<CR>
 nnoremap <leader>gd :lua vim.lsp.buf.definition()<CR>
+nnoremap <leader>gw :%s/\s\+$//g<CR>   " Get rid of trailing Whitespace
 nnoremap <leader>r :source $MYVIMRC<CR>
 nnoremap <leader>t :call CurrentDirTree()<CR>
 
