@@ -76,6 +76,36 @@ snippet ec "end code" w
 \end{lstlisting}
 endsnippet
 
+snippet ci "code inline" w
+\lstinline{$1}$0
+endsnippet
+
+snippet cim "code inline (in) math" w
+\text{\lstinline{$1}}$0
+endsnippet
+
+snippet tikz "tikz env" w
+\begin{tikzpicture}
+$1
+\end{tikzpicture}
+endsnippet
+
+snippet tn "tikz node" w
+\node at ($1, $2) ($3) {$4};$0
+endsnippet
+
+snippet tl "tikz line" w
+\draw ($1) -- ($2);$0
+endsnippet
+
+snippet src "source" w
+\paragraph{Source} Lecture $1 Slide $2
+endsnippet
+
+snippet ex "example" w
+\paragraph{Example} $1
+endsnippet
+
 # math
 
 snippet prz "positive real and zero" w
@@ -86,10 +116,18 @@ snippet df "dfrac" w
 \dfrac{$1}{$2}$0
 endsnippet
 
+snippet f "frac" w
+\frac{$1}{$2}$0
+endsnippet
+
 snippet cd "cdot" w
 \cdot $1
 endsnippet
 
 snippet vb "vector bold" w
 \vb{$1}$0
+endsnippet
+
+snippet v "vector zero" w
+\vb{0}$0
 endsnippet

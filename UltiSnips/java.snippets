@@ -1,18 +1,14 @@
-snippet cl "class" i
-import java.util.Scanner;
-
-class $1 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		$0
-	}
-}
+snippet pfi "private final int" i
+private final int $1;$0
 endsnippet
 
-snippet printf "printf" i
-System.out.printf("$1\\n", $2);$0
+snippet pfd "private final double" i
+private final double $1;$0
 endsnippet
 
-snippet endl "print end line" i
-System.out.println();
+snippet ts "toString" i
+@Override
+public String toString() {
+	return String.format("$1", $2);
+}$0
 endsnippet

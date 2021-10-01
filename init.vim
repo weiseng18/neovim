@@ -46,6 +46,7 @@ autocmd BufNewFile,BufRead *.tex :autocmd TextChanged,TextChangedI <buffer> sile
 
 set wrap linebreak      " line wrap, without breaking words
 set breakindent         " indented wraps
+set autoindent          " auto indent
 set relativenumber      " line numbers relative to cursor line
 set number              " set current line number as actual
 set hidden              " allows buffer switching without saving
@@ -99,7 +100,10 @@ let g:UltiSnipsEditSplit           = 'vertical'
 
 " ------------------------------------------------------------- vim_lsc
 
-let g:lsc_server_commands = {'java': '~/Downloads/vim-java/java-language-server/dist/lang_server_linux.sh'}
+let g:lsc_server_commands = {
+   \ 'java': '~/Downloads/vim-java/java-language-server/dist/lang_server_linux.sh',
+   \ '*.jsh': '~/Downloads/vim-java/java-language-server/dist/lang_server_linux.sh',
+\}
 
 " ------------------------------------------------ vim_markdown_preview
 
