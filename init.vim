@@ -162,6 +162,9 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 
 " latex
 nnoremap <leader>m ciw$$<esc>P
+nnoremap <leader>fd i\dfrac{<esc>f/s}{<esc>Ea}<esc>
+nnoremap <leader>ft i\tfrac{<esc>f/s}{<esc>Ea}<esc>
+nnoremap <leader>yc "+yi{
 
 " --------------------------------------------------------- vim_abbrevs
 

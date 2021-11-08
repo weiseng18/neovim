@@ -98,6 +98,10 @@ snippet tl "tikz line" w
 \draw ($1) -- ($2);$0
 endsnippet
 
+snippet tc "tikz coordinate" w
+\coordinate ($1) at ($2, $3);$0
+endsnippet
+
 snippet src "source" w
 \paragraph{Source} Lecture $1 Slide $2
 endsnippet
@@ -116,6 +120,10 @@ snippet df "dfrac" w
 \dfrac{$1}{$2}$0
 endsnippet
 
+snippet tf "tfrac" w
+\tfrac{$1}{$2}$0
+endsnippet
+
 snippet f "frac" w
 \frac{$1}{$2}$0
 endsnippet
@@ -130,4 +138,14 @@ endsnippet
 
 snippet v "vector zero" w
 \vb{0}$0
+endsnippet
+
+# others
+
+snippet circuit "circuit" w
+\begin{center}
+	\begin{tikzpicture}
+		$1
+	\end{tikzpicture}
+\end{center}
 endsnippet
