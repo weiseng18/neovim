@@ -39,6 +39,7 @@ set expandtab           " space instead tab when pressing <Tab>
 set shiftwidth=2        " # of spaces to use for each >> and <<
 
 " for cs2030s
+autocmd BufNewFile,BufRead *.jsh setlocal syntax=java filetype=java tabstop=4 softtabstop=4 shiftwidth=4
 autocmd Filetype java setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
 " for latex

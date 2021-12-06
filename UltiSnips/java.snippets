@@ -6,6 +6,10 @@ snippet pfd "private final double" i
 private final double $1;$0
 endsnippet
 
+snippet pf "private final" i
+private final $1;$0
+endsnippet
+
 snippet ts "toString" i
 @Override
 public String toString() {
@@ -15,4 +19,14 @@ endsnippet
 
 snippet pl "print line" i
 System.out.println("$1");
+endsnippet
+
+snippet form "print format" i
+System.out.format("$1", $2);
+endsnippet
+
+snippet psvm "public static void main" i
+public static void main(String[] args) {
+		$1
+}$0
 endsnippet
