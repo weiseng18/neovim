@@ -33,17 +33,16 @@ call plug#end()
 
 " ------------------------------------------------------------ vim_sets
 
-set tabstop=2           " # of spaces a <Tab> counts for
-set softtabstop=2       " # of spaces a <Tab> is when editing
+set tabstop=4           " # of spaces a <Tab> counts for
+set softtabstop=4       " # of spaces a <Tab> is when editing
 set expandtab           " space instead tab when pressing <Tab>
-set shiftwidth=2        " # of spaces to use for each >> and <<
-
-" for cs2030s
-autocmd BufNewFile,BufRead *.jsh setlocal syntax=java filetype=java tabstop=4 softtabstop=4 shiftwidth=4
-autocmd Filetype java setlocal tabstop=4 softtabstop=4 shiftwidth=4
+set shiftwidth=4        " # of spaces to use for each >> and <<
 
 " for latex
 autocmd BufNewFile,BufRead *.tex :autocmd TextChanged,TextChangedI <buffer> silent write
+
+" 2 spaces for latex and js
+autocmd Filetype tex,js setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 set wrap linebreak      " line wrap, without breaking words
 set breakindent         " indented wraps
