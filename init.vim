@@ -25,6 +25,13 @@ Plug 'iamcco/markdown-preview.nvim'   " markdown previewer
 
 Plug 'lervag/vimtex'                  " Latex
 
+" This must be set before Plug to work
+" https://github.com/vim-pandoc/vim-pandoc/issues/342
+let g:pandoc#filetypes#pandoc_markdown = 0
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-pandoc/vim-rmarkdown'       " RMarkdown
+
 Plug 'nvim-lua/popup.nvim'            " telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -43,6 +50,12 @@ autocmd BufNewFile,BufRead *.tex :autocmd TextChanged,TextChangedI <buffer> sile
 
 " 2 spaces for latex and js
 autocmd Filetype tex,js setlocal tabstop=2 softtabstop=2 shiftwidth=2
+
+" for RMarkdown
+augroup rmarkdown_update
+    autocmd!
+    autocmd BufWritePost,FileWritePost *.Rmd silent :RMarkdown! pdf
+augroup end
 
 set wrap linebreak      " line wrap, without breaking words
 set breakindent         " indented wraps
@@ -142,6 +155,7 @@ let g:mkdp_highlight_css = ''
 nmap <C-p> <Plug>MarkdownPreviewToggle
 
 " ---------------------------------------------------------- vim_remaps
+" TODO: split into ftplugin
 
 nnoremap <Space> <Nop>
 let mapleader = " "
